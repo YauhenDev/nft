@@ -1,0 +1,46 @@
+@import "@styles/vars";
+
+
+.left {
+	position: fixed;
+	top: 0px;
+	height: 100%;
+	width: $width-left-part-pc;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: $green-dark;
+	padding: 0 0 1rem 0;
+	text-align: center;
+	svg {
+		&[data-param="logo"] {
+			fill: $white;
+			padding: 0 1rem 1rem 1rem;
+		}
+	}
+}
+
+.main {
+    margin-left: $width-left-part-pc;
+}
+
+@media  (max-width: 767px) {
+	.left {
+		flex-direction: row;
+		height: $height-nav-mobile;
+		line-height: $height-nav-mobile;
+		padding: 0 12px;
+		width: 100%;
+		svg {
+			&[data-param="logo"] {
+				height: $height-nav-mobile;
+				padding: 0 10px 10px 0;
+			}
+		}
+	}
+	.main {
+		margin-top: $height-nav-mobile + 12px;
+		margin-bottom: $height-nav-mobile + 12px;
+		margin-left: 0;
+	}
+}

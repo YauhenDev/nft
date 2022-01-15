@@ -1,0 +1,66 @@
+@import "@styles/vars";
+
+.menu {
+	position: static;
+    flex: 1 1 0%;
+	ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		list-style: none;
+		padding-left: 0;
+		margin-top: 1rem;
+	}
+	li {
+		width: 100%;
+		flex: 1 1 0%;
+		margin-bottom: 2rem;
+	}
+	a {
+		display: block;
+		border-left: 3px solid transparent;
+		border-right: 3px solid transparent;
+		svg {
+			fill: rgba($color: $green, $alpha: 0.3);
+			width: 40px;
+		}
+		&:hover {
+			border-left: 3px solid transparent;
+			svg {
+				fill: $green;
+			}
+		}
+	}
+}
+
+@media  (max-width: 767px) {
+	.menu {
+		position: fixed;
+		flex: 1 1 0%;
+		background-color: $green-dark;
+		bottom: 0px;
+		left: 0px;
+		z-index: 1;
+		width: 100%;
+		height: $height-nav-mobile;
+		line-height: $height-nav-mobile;
+		ul {
+			flex-direction: row;
+			margin-top: 0;
+		}
+		a {
+			border-right: 0;
+			border-left: 0;
+			border-top: 3px solid transparent;
+			svg {
+				width: auto;
+				height: 28px;
+			}
+			&:hover {
+				svg {
+					fill: $green;
+				}
+			}
+		}
+	}
+}

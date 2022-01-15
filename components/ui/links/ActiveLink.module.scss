@@ -1,0 +1,20 @@
+@import "@styles/vars";
+
+.active {
+	border-left: 3px solid $green !important;
+	svg {
+		fill: $green !important;
+	}
+}
+
+// МОБИЛА
+@media (max-width: 767px) {
+	.active {
+		border-right: 0 !important;
+		border-left: 0 !important;
+		border-top: 3px solid $green !important;
+		svg {
+			fill: $green !important;
+		}
+	}
+}
