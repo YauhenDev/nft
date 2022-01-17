@@ -6,6 +6,7 @@ import ContactsModal from '@components/dumb/modal/ContactsModal'
 
 import { en } from '@locales/en'
 import { ru } from '@locales/ru'
+import { project } from '../state/project'
 
 import '@styles/app.scss'
 
@@ -26,12 +27,13 @@ export default function MyApp({ Component, pageProps }) {
 	return (
 	<Layout
 		state={ state }
-		setmodalShow={setmodalShow}
+		setmodalShow={ setmodalShow }
 	>
 		
 		<Component 
 			{...pageProps}
-			state={state}
+			state={ state }
+			project={ project }
 		/>
 
 		<ContactsModal	

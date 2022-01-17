@@ -14,7 +14,7 @@ export const ru = {
 			fakeTest 	: "тест главной страницы"
 		},
 		{
-			nameLink	: "Лист проектов",
+			nameLink	: "Сканировать проект NFT",
 			titleLink	: "Лист проектов",
 			seoTitle	: "Лист проектов",
 			seoDescription : "Лист проектов",

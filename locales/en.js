@@ -14,7 +14,7 @@ export const en = {
 			fakeTest 	: "test index page"
 		},
 		{
-			nameLink	: "List project",
+			nameLink	: "Scan NFT Project",
 			titleLink	: "List project",
 			seoTitle	: "List project",
 			seoDescription : "List project",

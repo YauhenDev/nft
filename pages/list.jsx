@@ -1,8 +1,12 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { Container, Row, Col } from 'react-bootstrap'
+
+import ListProject from '@containers/listProject/ListProject'
 
 export default function PageList({
 	state,
+	project,
 	setmodalShow
 }) {
 
@@ -22,9 +26,18 @@ export default function PageList({
 			<Row>
 				<Col>
 					<h1>{ nameLink }</h1>
-					{ fakeTest }
-				</Col>
+					</Col>
 			</Row>
+
+			<Row>
+				{ project.fakeProject.map( (p, i) => (
+					<ListProject 
+						key={ i }
+						project={ p }
+					/>
+				))}
+			</Row>
+				
 		</Container>
 
 	</>

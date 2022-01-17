@@ -1,0 +1,20 @@
+@import "@styles/vars";
+
+.project {
+	div {
+		margin: .5rem .25rem;
+	}
+	a {
+		display: block;
+		background-color: $green-light-bg;
+		padding: .75rem;
+		&:hover {
+			color: $green;
+			background-color: rgba($color: $green-light-bg, $alpha: 0.5)
+		}
+	}
+}
+
+@media  (max-width: 767px) {
+
+}
