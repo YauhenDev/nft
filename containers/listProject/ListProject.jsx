@@ -19,6 +19,7 @@ export default function ListProject({
 		<div>
 			<Link
 				href={`/list/${project.id}`}
+				//href={`/list/${project.pathLink}`}
 			>
 				<a 
 					title={ project.nameProject }

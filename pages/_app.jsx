@@ -6,7 +6,7 @@ import ContactsModal from '@components/dumb/modal/ContactsModal'
 
 import { en } from '@locales/en'
 import { ru } from '@locales/ru'
-import { project } from '../state/project'
+import { projects } from '../state/project'
 
 import '@styles/app.scss'
 
@@ -33,7 +33,7 @@ export default function MyApp({ Component, pageProps }) {
 		<Component 
 			{...pageProps}
 			state={ state }
-			project={ project }
+			projects={ projects }
 		/>
 
 		<ContactsModal	

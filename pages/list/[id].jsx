@@ -1,92 +1,42 @@
 import Head from 'next/head'
-import { server } from '../../config/index'
 
-import { project } from '../../state/project'
+import { projects } from '../../state/project'
 
+export async function getStaticPaths() {
 
-// рабочий вариант Paths
-// export async function getStaticPaths() {
+	const paths = projects.fakeProject.map(item => {
+		return {
+			params: { 
+				id: item.id.toString(),
+				//slug: item.slug
+			}
+		}
+	})
 
-// 	const paths = project.fakeProject.map(item => {
-// 		return {
-// 			params: { 
-// 				id: item.id.toString()
-// 			}
-// 		}
-// 	})
+	return { 
+		paths, 
+		fallback: false 
+	}
+}
 
-// 	return { 
-// 		paths, 
-// 		fallback: false 
-// 	}
-// }
+export async function getStaticProps ({ params }) {
 
-// export const getStaticProps = async (context) => {
-// 	//const article: Article = await getArticle(context.id);
-
-// 	const { items } = await ({
-// 		'item.id': params.id
-// 	})
-  
-// 	return {
-// 	  props: {
-// 		item: items[0]
-// 	  }
-// 	}
-//   };
-
-/*   export const getStaticProps = async (context) => {
-
-	//const item: Item = await getItem(context.id);
-	//const item = await getEntries( context.id )
-	const item = await ( context.id )
-  
-	debugger
+	// const { items } = {
+	// 	'slug': params.slug
+	// }
 	return {
 	  props: {
-		item
+		//item: items[0]
+		item: projects.fakeProject[params.id]
 	  }
 	}
-  }; */
-
-// export async function getStaticProps( params ) {
-
-// 	const id = params.id
-// 	return {
-// 		props: {
-// 			id,
-// 		},
-// 	}
-// }
-
-// export async function getStaticProps( { params } ) {
-
-// 	// const id = context.params.id
-// 	// const res = await fetch ( project.fakeProject + id )
-// 	// const data = await res.json()
-
-// 	const { items } = await fetch ( params.fakeProject + id )
-
-// 	return {
-// 		props: { 
-// 			project: items[0]
-// 		}
-// 	};
-// }
-
-// export async function getServerSideProps({ params }) {
-//     const res = await fetch(`${ server }/list/${ project.fakeProject.id }`)
-// 	const data = await res.json()
-// 	console.log(data)
-//     return {
-//         props: { data }
-//     }
-// }
+}
 
 export default function ListProject({ 
-
+	item
 }) {
 
+	//debugger;
 	return (
 		<>
 			<Head>
@@ -96,7 +46,7 @@ export default function ListProject({
 				<meta property="og:description"	content="" />
 			</Head>
 
-			test
+			test { item.nameProject } <br />
 
 		</>
 	)

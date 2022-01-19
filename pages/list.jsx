@@ -6,13 +6,14 @@ import ListProject from '@containers/listProject/ListProject'
 
 export default function PageList({
 	state,
-	project,
+	projects,
 	setmodalShow
 }) {
 
 	const i = 1
-	const { nameLink, seoTitle, seoDescription, fakeTest } = state.mainPages[i]
+	const { nameLink, seoTitle, seoDescription } = state.mainPages[i]
 
+	//debugger;
 	return (
 	<>
 		<Head>
@@ -30,7 +31,7 @@ export default function PageList({
 			</Row>
 
 			<Row>
-				{ project.fakeProject.map( (p, i) => (
+				{ projects.fakeProject.map( (p, i) => (
 					<ListProject 
 						key={ i }
 						project={ p }

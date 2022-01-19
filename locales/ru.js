@@ -35,4 +35,4 @@ export const ru = {
 	footer: {
 		copyright: 'All rights reserved.'
 	}
-};
+}
