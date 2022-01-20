@@ -3,7 +3,8 @@ import Head from 'next/head'
 import styles from './Layout.module.scss'
 import LinkLogo from '@components/ui/logo/LinkLogo'
 import NavBar  from '@components/dumb/navbar/NavBar'
-import ToggleLanguage from '@components/dumb/language/ToggleLanguage'
+// если необходимо языки --------------------------------------
+//import ToggleLanguage from '@components/dumb/language/ToggleLanguage'
 
 export default function Layout({ 
 	children,
@@ -37,7 +38,7 @@ export default function Layout({
 				setmodalShow={ setmodalShow }
 			/>
 
-			<ToggleLanguage />
+			{/* <ToggleLanguage /> */}
 
 		</header>
 

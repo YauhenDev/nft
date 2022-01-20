@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import ListProject from '@containers/listProject/ListProject'
@@ -31,7 +30,7 @@ export default function PageList({
 			</Row>
 
 			<Row>
-				{ projects.fakeProject.map( (p, i) => (
+				{ projects.map( (p, i) => (
 					<ListProject 
 						key={ i }
 						project={ p }

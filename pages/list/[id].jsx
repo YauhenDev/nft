@@ -1,18 +1,17 @@
 import Head from 'next/head'
 
-import { projects } from '../../state/project'
+import { projects } from '@state/projects'
 
 export async function getStaticPaths() {
 
-	const paths = projects.fakeProject.map(item => {
+	const paths = projects.map(item => {
 		return {
 			params: { 
-				id: item.id.toString(),
-				//slug: item.slug
+				//slug: item.slug,
+				id: item.id.toString()
 			}
 		}
 	})
-
 	return { 
 		paths, 
 		fallback: false 
@@ -21,13 +20,14 @@ export async function getStaticPaths() {
 
 export async function getStaticProps ({ params }) {
 
-	// const { items } = {
+	// const { items } = ({
 	// 	'slug': params.slug
-	// }
+	// })
+
 	return {
 	  props: {
-		//item: items[0]
-		item: projects.fakeProject[params.id]
+		//item: projects[params.id]
+		item: projects[params.id]
 	  }
 	}
 }
@@ -36,7 +36,7 @@ export default function ListProject({
 	item
 }) {
 
-	//debugger;
+	debugger;
 	return (
 		<>
 			<Head>

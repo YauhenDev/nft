@@ -6,7 +6,8 @@
 	  "@containers*": ["containers*"],
       "@styles*": ["styles*"],
       "@assets*": ["assets*"],
-      "@locales*": ["locales*"]
+      "@locales*": ["locales*"],
+      "@state*": ["state*"]
     }
   }
 }
