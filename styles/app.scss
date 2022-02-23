@@ -71,6 +71,12 @@ a {
 	}
 }
 
+svg {
+	[data-fill="green"] {
+		fill: $green !important;
+	}
+}
+
 
 // обнуляем Global style bootstrap
 .nav-link,

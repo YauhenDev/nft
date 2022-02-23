@@ -5,7 +5,7 @@ export const state = {
 	},
 	mainPages: [
 		{
-			nameLink	: "",
+			nameLink	: "Head 1 - test",
 			titleLink	: "",
 			seoTitle	: "Test title",
 			seoDescription : "",
@@ -14,7 +14,7 @@ export const state = {
 			fakeTest 	: "test index page"
 		},
 		{
-			nameLink	: "Scan NFT Project",
+			nameLink	: "Scam NFT Project",
 			titleLink	: "List project",
 			seoTitle	: "List project",
 			seoDescription : "List project",
@@ -23,7 +23,7 @@ export const state = {
 			fakeTest 	: "page LIST"
 		},
 		{
-			nameLink	: "Scan",
+			nameLink	: "Send NFT project",
 			titleLink	: "Scan",
 			seoTitle	: "Scan",
 			seoDescription : "Scan",
@@ -33,6 +33,15 @@ export const state = {
 		}
 	],
 	footer: {
-		copyright: 'All rights reserved.'
-	}
+		copyright: 'All rights reserved.',
+	},
+	search: {
+		textInput: 'Search scam project',
+	},
+	send: {
+		textLabel: 		'URL',
+		textInput: 		'Send URL',
+		textDescription: 'Description',
+		textButton:		'Send',
+	},
 };

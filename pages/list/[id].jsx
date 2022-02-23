@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+import Project from '@containers/listProject/Project'
 import { projects } from '@state/projects'
 
 export async function getStaticPaths() {
@@ -36,7 +37,7 @@ export default function ListProject({
 	item
 }) {
 
-	debugger;
+	//debugger;
 	return (
 		<>
 			<Head>
@@ -46,7 +47,9 @@ export default function ListProject({
 				<meta property="og:description"	content="" />
 			</Head>
 
-			test { item.nameProject } <br />
+			<Project 
+				item={ item }
+			/>
 
 		</>
 	)

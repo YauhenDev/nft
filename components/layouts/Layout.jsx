@@ -24,7 +24,7 @@ export default function Layout({
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content="https://" />
 			<meta property="og:site_name" content="" />
-			<meta property="og:image" content="/assets/img/" />
+			{/* <meta property="og:image" content="/assets/img/" /> */}
 		</Head>
 
 		<header className={ styles.left }>

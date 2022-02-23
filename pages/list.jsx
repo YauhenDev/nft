@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import { Container, Row, Col } from 'react-bootstrap'
 
-import ListProject from '@containers/listProject/ListProject'
+
+import ListBlock from '@containers/listProject/ListBlock'
 
 export default function PageList({
 	state,
@@ -24,20 +25,14 @@ export default function PageList({
 
 		<Container fluid>
 			<Row>
-				<Col>
-					<h1>{ nameLink }</h1>
-					</Col>
-			</Row>
-
-			<Row>
-				{ projects.map( (p, i) => (
-					<ListProject 
-						key={ i }
-						project={ p }
-					/>
-				))}
-			</Row>
 				
+				<ListBlock 
+					projects={ projects }
+					nameLink={ nameLink }
+					search={ state.search }
+				/>
+
+			</Row>
 		</Container>
 
 	</>

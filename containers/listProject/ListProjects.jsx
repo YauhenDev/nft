@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Col } from 'react-bootstrap'
 
-import styles from './ListProject.module.scss'
+import styles from './Project.module.scss'
 
 export default function ListProject({ 
 	project

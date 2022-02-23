@@ -1,0 +1,11 @@
+@import "@styles/vars";
+
+.text {
+	padding: 1rem 1.5rem;
+}
+
+@media  (max-width: 767px) {
+	.text {
+		padding: 0.5rem 1rem;
+	}
+}

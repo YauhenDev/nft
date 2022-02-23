@@ -1,5 +1,6 @@
+import IndexBlock from '@containers/indexBlock/IndexBlock'
 import Head from 'next/head'
-import { Container, Row, Col } from 'react-bootstrap'
+
 
 export default function Home({
 	state,
@@ -7,7 +8,7 @@ export default function Home({
 }) {
 
 	const i = 0
-	const { seoTitle, seoDescription, fakeTest } = state.mainPages[i]
+	const { seoTitle, seoDescription } = state.mainPages[i]
 
 	return (
 	<>
@@ -18,43 +19,9 @@ export default function Home({
 			<meta property="og:description"	content={ seoDescription } />
 		</Head>
 
-		<Container fluid>
-			<Row>
-				<Col>
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-					{fakeTest}<br />
-				</Col>
-			</Row>
-		</Container>
+		<IndexBlock 
+			indexPages={ state.mainPages[i] }
+		/>
 
 	</>
 	)

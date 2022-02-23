@@ -1,5 +1,8 @@
 import Head from 'next/head'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
+
+import ScanBlock from '@containers/scanBlock/ScanBlock'
+import SendProject from '@components/dumb/sendProject/SendProject'
 
 export default function PageScan({
 	state,
@@ -7,7 +10,7 @@ export default function PageScan({
 }) {
 
 	const i = 2
-	const { nameLink, seoTitle, seoDescription, fakeTest } = state.mainPages[i]
+	const { seoTitle, seoDescription } = state.mainPages[i]
 
 	return (
 	<>
@@ -20,10 +23,15 @@ export default function PageScan({
 
 		<Container fluid>
 			<Row>
-				<Col>
-					<h1>{ nameLink }</h1>
-					{ fakeTest }
-				</Col>
+
+				<ScanBlock 
+					scanPage={ state.mainPages[i] }
+				/>
+
+				<SendProject 
+					send={ state.send }
+				/>
+
 			</Row>
 		</Container>
 
